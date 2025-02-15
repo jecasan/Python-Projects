@@ -4,7 +4,7 @@ import smtplib
 import random as rd
 
 MY_EMAIL = "jerickpython@gmail.com"
-PASSWORD = "ksopdjmxasbmbzxq"
+PASSWORD = #yourpassword
 
 def main():
     month, day = get_date()
