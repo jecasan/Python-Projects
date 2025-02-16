@@ -5,8 +5,8 @@ from datetime import datetime
 
 MY_LAT = 14.599512
 MY_LONG = 120.984222
-MY_EMAIL = "jerickpython@gmail.com"
-PASSWORD = "ksopdjmxasbmbzxq"
+MY_EMAIL = [your_email]
+PASSWORD = [your_app_password]
 """
 To test code use TEST parameters:
     Change loc[0] with TEST_LAT and loc[1] with TEST_LONG
