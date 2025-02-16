@@ -9,9 +9,7 @@ PASSWORD = #yourpassword
 def main():
     month, day = get_date()
     bday_dict = birthday_data()
-    email, name = check_day(month, day, bday_dict)
-    message = pick_template(name)
-    send_email(email, message)
+    check_day(month, day, bday_dict)
 #------------Get Date------------#
 def get_date():
     now = dt.datetime.now()
@@ -31,8 +29,8 @@ def pick_template(name):
 #------------Check Day------------#
 def check_day(month, day, dict):   
     for date in dict:
-        if month == date["month"] and day == date["day"]:
-            return date["email"], date["name"]
+        message = pick_template(date["name"])
+        send_email(date["email"], message)
 #------------Send Email------------#
 def send_email(email, message):
     with smtplib.SMTP("smtp.gmail.com") as connection:
