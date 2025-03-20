@@ -1,8 +1,12 @@
 import requests
 import os
 from twilio.rest import Client
+from dotenv import find_dotenv, load_dotenv
 
-account_sid = "AC9f7f453fb25207dee42d88274cbab8b1"
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
+
+account_sid = os.environ.get("AUTH_ID")
 auth_token = os.environ.get("AUTH_TOKEN")
 
 
